@@ -1,7 +1,9 @@
 import random
 from collections import Counter
 
-N = 250  
+random.seed(42)
+
+N = 500
 with open("python_projects.txt") as f:
     projects = f.read().splitlines()
 

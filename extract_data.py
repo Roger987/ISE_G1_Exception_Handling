@@ -11,5 +11,4 @@ with py7zr.SevenZipFile("vibe_dataset/vibe-coded-apps.7z", mode='r') as z:
     z.extractall(path="vibe_dataset")
 
 
-os.remove("vibe_dataset/vibe-coded-web-apps.7z")
 print("Dataset extracted to vibe_dataset/")
