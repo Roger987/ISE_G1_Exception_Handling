@@ -28,6 +28,12 @@ The results are saved in the folder analysis_csv/.
 
 Each CSV file corresponds to one CodeQL query applied to one project.
 
+To run multiple analyses in parallel  run:
+```bash
+chmod +x run_dast.sh
+JOBS=4 THREADS=2 ./run_fast.sh
+```
+
 ## Ground Truth
 This allows user to check if the issues raised by CodeQL are legitimate.
 
