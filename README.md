@@ -28,6 +28,27 @@ The results are saved in the folder analysis_csv/.
 
 Each CSV file corresponds to one CodeQL query applied to one project.
 
+## Ground Truth
+This allows user to check if the issues raised by CodeQL are legitimate.
+
+From the project root run:
+```bash
+streamlit run ground_truth.py --   --analysis-dir analysis_csv   --source-root vibe_dataset/apps   --out-dir analysis_labeling   --sample-per-query 10   --snippet-context 15   --min-lines-after 8
+
+```
+
+## RQ1 Analysis
+
+1. Runs descriptive analysis, adjusts results based on the CodeQL precision obtined by ground_truth.py
+2. Generates plots and charts.
+3. Calculates Kruskal-Wallis H-test, along its assumptions.
+4. Runs post-hoc: Dunn test with Benjamini-Hochberg correction to limit False Discovery Rate.
+
+From the project root:
+```bash
+python3 rq1_statistical_analysis.py --analysis-dir analysis_csv --out-dir final_results --stats-group llm_family --use-inline-calibration --stats-level file --stats-min-n 5 --stats-fail-small-n
+```
+
 ## RQ2 Analysis
 From the project root:
 ```bash
