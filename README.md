@@ -27,3 +27,19 @@ This script:
 The results are saved in the folder analysis_csv/. 
 
 Each CSV file corresponds to one CodeQL query applied to one project.
+
+## RQ2 Analysis
+From the project root:
+```bash
+chmod +x run_tech_scanner.sh
+./run_tech_scanner.sh
+python3 rq2_analysis.py
+```
+
+1. These scripts categorize the previoulsy downloaded dataset, exporting the Python frameworks found to a CSV;
+2. Aggregate the results with the one from RQ1 and export table result to a CSV.
+
+Finally, the following script create a histogram image from the previous generated table.
+```bash
+python3 rq2_graph.py
+```

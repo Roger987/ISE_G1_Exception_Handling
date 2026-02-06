@@ -3,3 +3,10 @@ venv
 .DS_Store
 
 .git_broken/
+
+vibe_dataset/*
+
+python_projects_subset.txt
+python_projects.txt
+
+analysis_csv/
